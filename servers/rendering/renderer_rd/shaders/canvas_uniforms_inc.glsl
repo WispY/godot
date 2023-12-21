@@ -80,7 +80,7 @@ layout(set = 0, binding = 1, std140) uniform CanvasData {
 
 	uint directional_light_count;
 	float tex_to_sdf;
-	uint pad1;
+	uint canvas_visible_layers;
 	uint pad2;
 }
 canvas_data;

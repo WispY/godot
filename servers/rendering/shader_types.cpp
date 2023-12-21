@@ -250,6 +250,7 @@ ShaderTypes::ShaderTypes() {
 	shader_modes[RS::SHADER_CANVAS_ITEM].functions["vertex"].built_ins["VERTEX_ID"] = constt(ShaderLanguage::TYPE_INT);
 	shader_modes[RS::SHADER_CANVAS_ITEM].functions["vertex"].built_ins["AT_LIGHT_PASS"] = constt(ShaderLanguage::TYPE_BOOL);
 	shader_modes[RS::SHADER_CANVAS_ITEM].functions["vertex"].built_ins["TEXTURE_PIXEL_SIZE"] = constt(ShaderLanguage::TYPE_VEC2);
+	shader_modes[RS::SHADER_CANVAS_ITEM].functions["vertex"].built_ins["CANVAS_VISIBLE_LAYERS"] = constt(ShaderLanguage::TYPE_UINT);
 	shader_modes[RS::SHADER_CANVAS_ITEM].functions["vertex"].can_discard = false;
 	shader_modes[RS::SHADER_CANVAS_ITEM].functions["vertex"].main_function = true;
 
@@ -271,6 +272,7 @@ ShaderTypes::ShaderTypes() {
 	shader_modes[RS::SHADER_CANVAS_ITEM].functions["fragment"].built_ins["SCREEN_PIXEL_SIZE"] = constt(ShaderLanguage::TYPE_VEC2);
 	shader_modes[RS::SHADER_CANVAS_ITEM].functions["fragment"].built_ins["POINT_COORD"] = constt(ShaderLanguage::TYPE_VEC2);
 	shader_modes[RS::SHADER_CANVAS_ITEM].functions["fragment"].built_ins["AT_LIGHT_PASS"] = constt(ShaderLanguage::TYPE_BOOL);
+	shader_modes[RS::SHADER_CANVAS_ITEM].functions["fragment"].built_ins["CANVAS_VISIBLE_LAYERS"] = constt(ShaderLanguage::TYPE_UINT);
 	shader_modes[RS::SHADER_CANVAS_ITEM].functions["fragment"].can_discard = true;
 	shader_modes[RS::SHADER_CANVAS_ITEM].functions["fragment"].main_function = true;
 

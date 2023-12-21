@@ -2955,6 +2955,7 @@ const VisualShaderNodeInput::Port VisualShaderNodeInput::ports[] = {
 	{ Shader::MODE_CANVAS_ITEM, VisualShader::TYPE_VERTEX, VisualShaderNode::PORT_TYPE_VECTOR_4D, "instance_custom", "INSTANCE_CUSTOM" },
 	{ Shader::MODE_CANVAS_ITEM, VisualShader::TYPE_VERTEX, VisualShaderNode::PORT_TYPE_SCALAR_INT, "instance_id", "INSTANCE_ID" },
 	{ Shader::MODE_CANVAS_ITEM, VisualShader::TYPE_VERTEX, VisualShaderNode::PORT_TYPE_SCALAR_INT, "vertex_id", "VERTEX_ID" },
+	{ Shader::MODE_CANVAS_ITEM, VisualShader::TYPE_VERTEX, VisualShaderNode::PORT_TYPE_SCALAR_UINT, "canvas_visible_layers", "CANVAS_VISIBLE_LAYERS" },
 
 	// Canvas Item, Fragment
 	{ Shader::MODE_CANVAS_ITEM, VisualShader::TYPE_FRAGMENT, VisualShaderNode::PORT_TYPE_VECTOR_4D, "fragcoord", "FRAGCOORD" },
@@ -2971,6 +2972,7 @@ const VisualShaderNodeInput::Port VisualShaderNodeInput::ports[] = {
 	{ Shader::MODE_CANVAS_ITEM, VisualShader::TYPE_FRAGMENT, VisualShaderNode::PORT_TYPE_VECTOR_4D, "specular_shininess", "SPECULAR_SHININESS" },
 	{ Shader::MODE_CANVAS_ITEM, VisualShader::TYPE_FRAGMENT, VisualShaderNode::PORT_TYPE_SAMPLER, "specular_shininess_texture", "SPECULAR_SHININESS_TEXTURE" },
 	{ Shader::MODE_CANVAS_ITEM, VisualShader::TYPE_FRAGMENT, VisualShaderNode::PORT_TYPE_VECTOR_2D, "vertex", "VERTEX" },
+	{ Shader::MODE_CANVAS_ITEM, VisualShader::TYPE_FRAGMENT, VisualShaderNode::PORT_TYPE_SCALAR_UINT, "canvas_visible_layers", "CANVAS_VISIBLE_LAYERS" },
 
 	// Canvas Item, Light
 	{ Shader::MODE_CANVAS_ITEM, VisualShader::TYPE_LIGHT, VisualShaderNode::PORT_TYPE_VECTOR_4D, "fragcoord", "FRAGCOORD" },

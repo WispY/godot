@@ -1159,6 +1159,7 @@ MaterialStorage::MaterialStorage() {
 		actions.renames["POINT_COORD"] = "gl_PointCoord";
 		actions.renames["INSTANCE_ID"] = "gl_InstanceID";
 		actions.renames["VERTEX_ID"] = "gl_VertexID";
+		actions.renames["CANVAS_VISIBLE_LAYERS"] = "canvas_visible_layers";
 
 		actions.renames["LIGHT_POSITION"] = "light_position";
 		actions.renames["LIGHT_DIRECTION"] = "light_direction";

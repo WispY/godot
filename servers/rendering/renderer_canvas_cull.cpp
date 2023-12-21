@@ -69,7 +69,7 @@ void RendererCanvasCull::_render_canvas_item_tree(RID p_to_render_target, Canvas
 	RENDER_TIMESTAMP("Render CanvasItems");
 
 	bool sdf_flag;
-	RSG::canvas_render->canvas_render_items(p_to_render_target, list, p_modulate, p_lights, p_directional_lights, p_transform, p_default_filter, p_default_repeat, p_snap_2d_vertices_to_pixel, sdf_flag, r_render_info);
+	RSG::canvas_render->canvas_render_items(p_to_render_target, list, p_modulate, p_lights, p_directional_lights, p_transform, p_default_filter, p_default_repeat, p_snap_2d_vertices_to_pixel, sdf_flag, canvas_cull_mask, r_render_info);
 	if (sdf_flag) {
 		sdf_used = true;
 	}

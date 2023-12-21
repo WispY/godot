@@ -1142,7 +1142,7 @@ RID RendererCanvasRenderRD::_create_base_uniform_set(RID p_to_render_target, boo
 	return uniform_set;
 }
 
-void RendererCanvasRenderRD::_render_items(RID p_to_render_target, int p_item_count, const Transform2D &p_canvas_transform_inverse, Light *p_lights, bool &r_sdf_used, bool p_to_backbuffer, RenderingMethod::RenderInfo *r_render_info) {
+void RendererCanvasRenderRD::_render_items(RID p_to_render_target, int p_item_count, const Transform2D &p_canvas_transform_inverse, Light *p_lights, bool &r_sdf_used, bool p_to_backbuffer, uint32_t canvas_cull_mask, RenderingMethod::RenderInfo *r_render_info) {
 	RendererRD::MaterialStorage *material_storage = RendererRD::MaterialStorage::get_singleton();
 	RendererRD::TextureStorage *texture_storage = RendererRD::TextureStorage::get_singleton();
 
@@ -1420,6 +1420,8 @@ void RendererCanvasRenderRD::canvas_render_items(RID p_to_render_target, Item *p
 		normal_transform.columns[1].normalize();
 		normal_transform.columns[2] = Vector2();
 		_update_transform_2d_to_mat4(normal_transform, state_buffer.canvas_normal_transform);
+
+		state_buffer.canvas_visible_layers = canvas_cull_mask;
 
 		state_buffer.canvas_modulate[0] = p_modulate.r;
 		state_buffer.canvas_modulate[1] = p_modulate.g;
@@ -2561,6 +2563,7 @@ RendererCanvasRenderRD::RendererCanvasRenderRD() {
 		actions.renames["POINT_COORD"] = "gl_PointCoord";
 		actions.renames["INSTANCE_ID"] = "gl_InstanceIndex";
 		actions.renames["VERTEX_ID"] = "gl_VertexIndex";
+		actions.renames["CANVAS_VISIBLE_LAYERS"] = "canvas_data.canvas_visible_layers";
 
 		actions.renames["LIGHT_POSITION"] = "light_position";
 		actions.renames["LIGHT_DIRECTION"] = "light_direction";
